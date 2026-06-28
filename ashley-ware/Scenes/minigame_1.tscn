@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://bxmxc57i23cqd"]
+
+[ext_resource type="Script" uid="uid://bmtwphanp30f5" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
+[ext_resource type="Texture2D" uid="uid://kodwkhw5y0w3" path="res://images/minigame_1_bg.png" id="1_enoba"]
+[ext_resource type="PackedScene" uid="uid://dmnwa2h5jef4i" path="res://Scenes/player.tscn" id="2_11mgy"]
+[ext_resource type="Script" uid="uid://5hfdo521vbhj" path="res://Scenes/garlic.gd" id="3_o6yob"]
+[ext_resource type="Texture2D" uid="uid://cde5c3o54jeen" path="res://images/mandrake.png" id="4_5txvl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5vpd"]
+size = Vector2(1189, 104.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn2gx"]
+size = Vector2(98.5, 33)
+
+[sub_resource type="Animation" id="Animation_0uv5o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.8040748, 16.659336)]
+}
+
+[sub_resource type="Animation" id="Animation_ojqsy"]
+resource_name = "floating"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3.8040748, 16.659336), Vector2(-3.804, -12.426)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmcek"]
+_data = {
+&"RESET": SubResource("Animation_0uv5o"),
+&"floating": SubResource("Animation_ojqsy")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5vpd"]
+radius = 57.06064
+height = 167.37793
+
+[node name="Minigame_1" type="Node2D" unique_id=1440305126]
+script = ExtResource("1_5txvl")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1652441800]
+offset_right = 1157.0
+offset_bottom = 659.0
+texture = ExtResource("1_enoba")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1119297794]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1029920168]
+offset_left = -7.0
+offset_top = 587.0
+offset_right = 1186.0
+offset_bottom = 670.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=896421258]
+position = Vector2(588, 639.75)
+shape = SubResource("RectangleShape2D_q5vpd")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1055356568]
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=711025588]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1494890581]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1361102756]
+position = Vector2(194, -30)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1909016973]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=2079627415]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=2125849094]
+position = Vector2(384, -64)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1825743798]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1043384221]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform5" type="StaticBody2D" parent="." unique_id=655736701]
+position = Vector2(593, -107)
+
+[node name="ColorRect" type="ColorRect" parent="Platform5" unique_id=1987661881]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=1071780801]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform6" type="StaticBody2D" parent="." unique_id=1700765567]
+position = Vector2(838, -203)
+
+[node name="ColorRect" type="ColorRect" parent="Platform6" unique_id=1235083397]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6" unique_id=272982723]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform7" type="StaticBody2D" parent="." unique_id=1313746689]
+position = Vector2(611, -317)
+
+[node name="ColorRect" type="ColorRect" parent="Platform7" unique_id=2019905507]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7" unique_id=1345821764]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform8" type="StaticBody2D" parent="." unique_id=1381922061]
+position = Vector2(331, -334)
+
+[node name="ColorRect" type="ColorRect" parent="Platform8" unique_id=1162091269]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8" unique_id=225489191]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform9" type="StaticBody2D" parent="." unique_id=1779279371]
+position = Vector2(82, -365)
+
+[node name="ColorRect" type="ColorRect" parent="Platform9" unique_id=422783148]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform9" unique_id=1740905434]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Platform10" type="StaticBody2D" parent="." unique_id=1765457021]
+position = Vector2(-128, -255)
+
+[node name="ColorRect" type="ColorRect" parent="Platform10" unique_id=1549378323]
+offset_left = 230.0
+offset_top = 493.0
+offset_right = 329.0
+offset_bottom = 526.0
+color = Color(0.21324864, 0.16252953, 0.47263598, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform10" unique_id=1750034596]
+position = Vector2(279.75, 509.5)
+shape = SubResource("RectangleShape2D_pn2gx")
+
+[node name="Player" parent="." unique_id=915280383 instance=ExtResource("2_11mgy")]
+position = Vector2(111, 502.00003)
+scale = Vector2(0.41042802, 0.4353176)
+
+[node name="Garlic" type="Node2D" parent="." unique_id=1331947019]
+position = Vector2(91.00001, 131)
+scale = Vector2(0.262878, 0.24010561)
+script = ExtResource("3_o6yob")
+
+[node name="Garlic" type="TextureRect" parent="Garlic" unique_id=719333818]
+offset_left = -3.8040748
+offset_top = 16.659336
+offset_right = 435.19592
+offset_bottom = 455.65933
+scale = Vector2(0.97960097, 0.9952376)
+texture = ExtResource("4_5txvl")
+
+[node name="animation" type="AnimationPlayer" parent="Garlic" unique_id=1174341343]
+root_node = NodePath("../Garlic")
+libraries/ = SubResource("AnimationLibrary_jmcek")
+
+[node name="Area2D" type="Area2D" parent="Garlic" unique_id=1157589059]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic/Area2D" unique_id=929809053]
+position = Vector2(213.02655, 195.74721)
+rotation = -2.6215515
+scale = Vector2(1.9535055, 2.1739058)
+shape = SubResource("CapsuleShape2D_q5vpd")

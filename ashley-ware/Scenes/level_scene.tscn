@@ -1,3 +1,61 @@
 [gd_scene format=3 uid="uid://c16lcje10d142"]
 
-[node name="Node2D" type="Node2D" unique_id=334957450]
+[ext_resource type="Script" uid="uid://drhufn5jxvra7" path="res://Scenes/timer_screen.gd" id="1_2fcgv"]
+[ext_resource type="Texture2D" uid="uid://bls1dagb8tq6l" path="res://images/plain bg.png" id="1_cn3xy"]
+[ext_resource type="Texture2D" uid="uid://cde5c3o54jeen" path="res://images/mandrake.png" id="2_c7xwe"]
+[ext_resource type="FontFile" uid="uid://bl1ynf8s36cr1" path="res://ConcertOne-Regular.ttf" id="4_qnqh0"]
+
+[node name="TimerScreen" type="Node2D" unique_id=334957450]
+script = ExtResource("1_2fcgv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1952666496]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cn3xy")
+
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=1734928256]
+offset_left = 42.0
+offset_top = 232.0
+offset_right = 2253.0
+offset_bottom = 671.0
+scale = Vector2(0.48472726, 0.46866736)
+
+[node name="Garlic" type="TextureRect" parent="GarlicContainer" unique_id=310026015]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=631995727]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=825532928]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=136931897]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1460072488]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=17899766]
+offset_left = 398.0
+offset_top = 97.0
+offset_right = 764.0
+offset_bottom = 226.0
+theme_override_colors/default_color = Color(0.24705882, 0.28235295, 0.8, 1)
+theme_override_fonts/normal_font = ExtResource("4_qnqh0")
+theme_override_font_sizes/normal_font_size = 108
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=814349901]
+offset_left = 500.0
+offset_top = 416.0
+offset_right = 650.0
+offset_bottom = 546.0
+theme_override_colors/default_color = Color(0.24705882, 0.28235295, 0.8, 1)
+theme_override_fonts/normal_font = ExtResource("4_qnqh0")
+theme_override_font_sizes/normal_font_size = 90
+text = "0.0"

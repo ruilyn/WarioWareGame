@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c0u776eub5rkj"]
+
+[ext_resource type="Script" uid="uid://cv4i5x62g6bsr" path="res://themed_timer.gd" id="1_s4e7u"]
+[ext_resource type="FontFile" uid="uid://bl1ynf8s36cr1" path="res://ConcertOne-Regular.ttf" id="2_acawl"]
+
+[node name="ThemedTimer" type="Node2D" unique_id=171335152]
+script = ExtResource("1_s4e7u")
+
+[node name="RichLabelText" type="RichTextLabel" parent="." unique_id=2136998506]
+offset_left = 500.0
+offset_top = 416.0
+offset_right = 650.0
+offset_bottom = 546.0
+theme_override_colors/default_color = Color(0.24705882, 0.28235295, 0.8, 1)
+theme_override_fonts/normal_font = ExtResource("2_acawl")
+theme_override_font_sizes/normal_font_size = 90
+text = "0.0"
