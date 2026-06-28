@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dwnaar3uicd20" path="res://Scenes/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://fmichhjpood2" path="res://images/bg.png" id="1_p3fck"]
 [ext_resource type="FontFile" uid="uid://bl1ynf8s36cr1" path="res://ConcertOne-Regular.ttf" id="2_4gxqj"]
+[ext_resource type="Texture2D" uid="uid://csraq3nkqsu3x" path="res://images/logo.png" id="3_twnyg"]
 
 [node name="TitleScreen" type="Node2D" unique_id=511081485]
 script = ExtResource("1_4gxqj")
@@ -12,24 +13,18 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_p3fck")
 
-[node name="Title" type="RichTextLabel" parent="." unique_id=1831216972]
-clip_contents = false
-offset_left = 107.0
-offset_top = 99.0
-offset_right = 632.0
-offset_bottom = 218.0
-theme_override_colors/default_color = Color(0.69411767, 0.8784314, 0.96862745, 1)
-theme_override_colors/font_outline_color = Color(0.1158235, 9.62615e-08, 0.62893033, 1)
-theme_override_constants/outline_size = 42
-theme_override_fonts/normal_font = ExtResource("2_4gxqj")
-theme_override_font_sizes/normal_font_size = 100
-text = "AshleyWare"
+[node name="logo" type="TextureRect" parent="." unique_id=1900441125]
+offset_left = -59.0
+offset_top = -36.0
+offset_right = 1075.0
+offset_bottom = 612.0
+texture = ExtResource("3_twnyg")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=802178484]
-offset_left = 158.0
-offset_top = 260.0
-offset_right = 545.0
-offset_bottom = 614.0
+offset_left = 67.0
+offset_top = 351.0
+offset_right = 454.0
+offset_bottom = 705.0
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1869185131]
 layout_mode = 2

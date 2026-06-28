@@ -1,12 +1,28 @@
 [gd_scene format=3 uid="uid://dx0v0few3ee30"]
 
-[ext_resource type="Texture2D" uid="uid://b8teq72a0hp41" path="res://icon.svg" id="1_7ctyi"]
+[ext_resource type="Script" uid="uid://j3dphphvrsm8" path="res://Scenes/fail_screen.gd" id="1_qgjdb"]
+[ext_resource type="Texture2D" uid="uid://bi1mjjafdyymm" path="res://images/over1.png" id="2_3e32n"]
+[ext_resource type="Texture2D" uid="uid://nm8lxsblnk1a" path="res://images/over2.png" id="3_hjix5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5vpd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3e32n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hjix5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1401565678]
+script = ExtResource("1_qgjdb")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1983401385]
-offset_left = 305.0
-offset_top = 184.0
-offset_right = 433.0
-offset_bottom = 312.0
-texture = ExtResource("1_7ctyi")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1548642000]
+position = Vector2(576.5, 332.5)
+scale = Vector2(1.0149912, 1.0262346)
+sprite_frames = SubResource("SpriteFrames_q5vpd")
+frame_progress = 0.403679
