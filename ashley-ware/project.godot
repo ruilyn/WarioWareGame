@@ -13,7 +13,7 @@ config_version=5
 config/name="AshleyWare"
 run/main_scene="uid://cvrweibg2on8k"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dcsqsxuxb2va3"
 
 [autoload]
 
